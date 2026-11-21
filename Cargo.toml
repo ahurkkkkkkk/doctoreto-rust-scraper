@@ -1,0 +1,32 @@
+# Author: ahura / @mabae
+[package]
+name = "doctoreto-scraper"
+version = "2.0.0"
+edition = "2024"
+authors = ["ahura (@mabae)"]
+description = "Rust scraper and report exporter for public Doctoreto doctor profiles"
+license = "UNLICENSED"
+
+[dependencies]
+anyhow = "1"
+base64 = "0.22"
+chrono = { version = "0.4", features = ["serde"] }
+clap = { version = "4", features = ["derive"] }
+docx-rs = "0.4.22"
+futures = "0.3"
+headless_chrome = "1.0.22"
+image = { version = "0.25", default-features = false, features = ["jpeg", "png", "gif", "webp"] }
+regex = "1"
+reqwest = { version = "0.12", default-features = false, features = ["rustls-tls", "gzip", "charset", "stream"] }
+rust_xlsxwriter = "0.92"
+scraper = "0.29"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+sha2 = "0.10"
+tokio = { version = "1", features = ["fs", "io-util", "macros", "rt-multi-thread", "sync", "time"] }
+url = "2"
+urlencoding = "2"
+
+[dev-dependencies]
+tempfile = "3"
+zip = { version = "7.4", default-features = false, features = ["deflate"] }
